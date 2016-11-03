@@ -12,4 +12,4 @@ A branch creates a copy of a project to be worked on. It's advisable to use bran
 A commit is a saved change to a document. A good commit message clearly identifies what was changed.
 
 * What is a merge conflict?
-A merge conflict occurs when the same part of a file is made in two different branches and then those branches are merged together.
+A merge conflict occurs when the same part of a file is made in two different branches and then later those branches are merged together.
