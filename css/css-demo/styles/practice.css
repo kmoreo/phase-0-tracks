@@ -1,0 +1,23 @@
+section#contact-info {
+	font-size: .8em;
+}
+
+section.job {
+	color: #e9e5dc;
+	border-radius: 25px;
+	border-style: solid;
+	padding: 20px
+}
+
+section.accomplishment {
+	font-size: .8em;
+}
+
+/* mouse over link */
+a:hover {
+	color: green;
+}
+
+ul > li {
+	color: purple;
+}

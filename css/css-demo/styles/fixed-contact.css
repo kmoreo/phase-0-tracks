@@ -27,3 +27,13 @@ border. */
 section#contact-info p:last-of-type {
   border-right: none;
 }
+
+section#contact-info {
+  font-size: .8em
+}
+
+section#job {
+  color: #e9e5dc
+  border: thin;
+  border-radius: 25px;
+}
