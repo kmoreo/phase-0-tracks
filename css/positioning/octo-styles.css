@@ -1,0 +1,22 @@
+div#fancy-octopus {
+	position: relative;
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img#octopus {
+	margin-top: 4cm;
+}
+
+img#hat {
+	position: absolute;
+	bottom: 375px;
+	left: 22px;
+}
+
+img#glasses {
+	position: absolute;
+	bottom: 228px;
+	left: 83px
+}
