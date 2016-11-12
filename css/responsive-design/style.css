@@ -33,17 +33,35 @@ figcaption {
 
 body {
   max-width: 960px;
-  min-width: 335px;
+  min-width: 200px;
 }
 
 #external-links {
   width: 20%;
   display: inline-block;
   vertical-align: top;
-  padding-right: 0.1%;
+  padding-right: 0.2%;
 }
 
 main {
   width: 79%;
   display: inline-block;
 }
+
+@media screen and (max-width: 530px) {
+  body {
+    font-size: small;
+  }
+
+  #external-links {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: larger;
+  }
+}
+
