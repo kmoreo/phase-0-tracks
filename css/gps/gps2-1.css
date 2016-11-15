@@ -1,3 +1,47 @@
 body {
-	background-color: pink;
+  background-color: #addfad;
+ }
+
+h1, h2, h3 {
+  font-family: Helvetica, sans-serif;
+  text-decoration: underline;
+  text-align: center;
+}
+
+img {
+  width: 25%;
+  height: auto;
+}
+
+.column-1 {
+  display:inline-block;
+  vertical-align: text-top;
+  width: 49%;
+  padding: 2px;
+  border: 1px solid purple;
+  background-image: url(https://image.freepik.com/free-vector/grey-linen-texture-background_1053-253.jpg);
+  /* float: left; */
+}
+
+.column-1 h2 {
+  color: pink;
+}
+
+.column-2 {
+  display: inline-block;
+  vertical-align: text-top;
+  width: 49%;
+  padding: 2px;
+  border: 1px solid purple;
+  background-image: url(https://image.freepik.com/free-vector/white-cubes-pattern_1053-248.jpg);
+  /* float: right; */
+}
+
+footer {
+  /* clear:both; */
+   padding-top: 1em;
+}
+
+a:hover {
+  background-color: yellow;
 }
