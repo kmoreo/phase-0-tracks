@@ -19,7 +19,7 @@ img {
   width: 49%;
   padding: 2px;
   border: 1px solid purple;
-  background-image: url(https://image.freepik.com/free-vector/grey-linen-texture-background_1053-253.jpg)
+  background-image: url(https://image.freepik.com/free-vector/grey-linen-texture-background_1053-253.jpg);
   /* float: left; */
 }
 
@@ -33,7 +33,7 @@ img {
   width: 49%;
   padding: 2px;
   border: 1px solid purple;
-  background-image: url(https://image.freepik.com/free-vector/white-cubes-pattern_1053-248.jpg)
+  background-image: url(https://image.freepik.com/free-vector/white-cubes-pattern_1053-248.jpg);
   /* float: right; */
 }
 
