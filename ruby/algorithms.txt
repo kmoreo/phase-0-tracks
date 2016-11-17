@@ -1,0 +1,24 @@
+Release 0: Equip Your New Robot
+
+#Elevatoring
+
+1. Enter the elevator lobby; it's the one with all the shiny doors.
+2. Locate a small rectangular receptacle with two buttons positioned vertically.
+3. Press the button corresponding to the direction you wish to go.
+	a. Push the top button to ascend.
+	b. Push the bottom button to descend.
+4. For each set of elevator doors that opens on your floor, determine, based on the lighted indicators located above the elevator doors whether the elevator is:
+	a. Ascending to a higher floor than your present floor.
+	b. Descending to a lower floor than your present floor.
+5. Once an elevator arrives going in the same direction you need to go, determine:
+	a. If the elevator is already to capacity, kindly decline boarding and return to step 4.
+	b. If the elevator is not yet to capacity, enter the elevator.
+6. Locate a set of buttons on either side of the elevator doors.
+7. Press the numbered button that corresponds to the number of the floor of your destination.
+8. Watch the display that indicates at which floor the elevator is stopping.
+9. Once the display reads out the floor of your destination, prepare to exit the elevator.
+10. Wait for the doors to open, then exit the elevator.
+
+
+Release 1: Find a Real-Life Algorithm
+
