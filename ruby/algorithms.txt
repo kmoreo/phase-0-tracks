@@ -24,7 +24,7 @@ Release 0: Equip Your New Robot
 
 Release 1: Find a Real-Life Algorithm
 
-#Make PB&J Sandwich (High-Level Detail)
+#Make PB&J Sandwich
 
 1. Enter kitchen on a mission to eat something tasty.
 2. Retrieve bread from pantry.
