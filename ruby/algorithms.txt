@@ -3,10 +3,12 @@ Release 0: Equip Your New Robot
 #Elevatoring
 
 1. Enter the elevator lobby; it's the one with all the shiny doors.
-2. Locate a small rectangular receptacle with two buttons positioned vertically.
-3. Press the button corresponding to the direction you wish to go.
-	a. Push the top button to ascend.
-	b. Push the bottom button to descend.
+2. Locate a small rectangular receptacle with either one button or two buttons positioned vertically.
+3. Once receptacle is located, confirm whether there's one or two buttons:
+	a. If there is only one button, press that button.
+	a. If there are two buttons:
+		i.	Push the top button to ascend.
+		ii. Push the bottom button to descend.
 4. For each set of elevator doors that opens on your floor, determine, based on the lighted indicators located above the elevator doors whether the elevator is:
 	a. Ascending to a higher floor than your present floor.
 	b. Descending to a lower floor than your present floor.
@@ -22,3 +24,31 @@ Release 0: Equip Your New Robot
 
 Release 1: Find a Real-Life Algorithm
 
+#Make PB&J Sandwich (High-Level Detail)
+
+1. Enter kitchen on a mission to eat something tasty.
+2. Retrieve bread from pantry.
+3. Decide how many dishes you want to wash when you're done:
+	a. If one, place a paper towel on the counter
+	b. If two, pull a plate out of cabinet and set on counter;
+4. Get knife from utensil drawer, preferably with a non-sharp edge; set next to paper towel/plate.
+5. Retrieve peanut butter from pantry.
+6. Retrieve jelly flavor of choice.
+7. Remove lids from peanut butter and jelly jars.
+8. Open bread bag and remove 2 slices of bread from loaf.
+9. Place slices of bread side-by side on paper towel/plate.
+10. Measure out about 2 tablespoons of peanut butter and spread on one slice of bread.
+	a. Analyze peanut butter coverage.
+	b. If you used small/normal-sized slices of bread, this initial amount may be sufficient.
+	c. If you used larger slices of bread, repeat step 10 at least once.
+11. Measure out about 1 tablespoon of jelly and spread on second slice of bread.
+	a. Analyze jelly coverage.
+	b. If coverage seems lacking, add jelly in approximately 1 teaspoon increments; there is such a thing as too much jelly, be careful.
+12. Place bread slices together so that peanut butter and jelly meet.
+13. Clean up:
+	a. Replace peanut butter jar lid and put jar back in its original spot
+	b. Replace jelly jar kid and put jelly jar back in its original spot;
+	c. Close bread tightly and secure with a bag tie, and put back in its original spot;
+	d. Rinse knife under warm water and place in sink or dishwasher.
+14. EAT THAT PB&J!
+15. Discard paper towel if used, or rinse plate and place in sink or dishwasher.
