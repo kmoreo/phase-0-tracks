@@ -31,15 +31,22 @@ current_year = 2016
 legit_age_true = (age_given.to_i == (current_year - birth_year.to_i))
 legit_age_false = !legit_age_true
 
+vampire = "EVALUATION: Results inconclusive."
 
 if legit_age_true && (likes_garlic_bread || wants_health_insurance)
-	puts "EVALUATION: Probably not a vampire."
+	vampire = "EVALUATION: Probably not a vampire."
 end
 
-if legit_age_false &&  (hates_garlic_bread || waives_health_insurance)
-	puts "EVALUATION: Probably a vampire."
+if legit_age_false && (hates_garlic_bread || waives_health_insurance)
+	vampire = "EVALUATION: Probably a vampire."
 end
 
-if legit_age_false &&  (hates_garlic_bread && waives_health_insurance)
-	puts "EVALUATION: Almost certainly a vampire."
+if legit_age_false && hates_garlic_bread && waives_health_insurance
+	vampire = "EVALUATION: Almost certainly a vampire."
 end
+
+if full_name == "Drake Cula" || full_name == "Tu Fang"
+	vampire = "EVALUATION: Definitely a vampire."
+end
+
+puts vampire
