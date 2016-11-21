@@ -40,9 +40,9 @@ number.to_i.times do
     	puts "Allergy:"
     	response = gets.chomp
 
-      		if response == "sunshine"
-        		vampire_allergies = TRUE
-      		end
+  		if response == "sunshine"
+    		vampire_allergies = TRUE
+  		end
       
     	break if response == "done"
 	
