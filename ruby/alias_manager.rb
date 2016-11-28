@@ -5,13 +5,15 @@
 # Input string to be modified.
 # original_name = "Felicia Torres"
 
-loop do
-	
-	break if input == "done"
+spy_book = {}
 
-	puts "Please enter the name you wish have aliased:"
-	original_name = gets.chomp
+puts "Welcome To The Fake Name Generator 3000." 
+loop do 
+	puts "Please enter the name you wish have faked. (Type \"quit\" when complete.)"
+	input = gets.chomp
+	break if input == "quit"
 
+	original_name = input
 
 	# Split string using .split(" ")
 	# Swap the first and last name using .reverse!
@@ -63,15 +65,22 @@ loop do
 	p spy_name_array
 
 	## After modification
-	  # Capitalize first letter of each name
+		# Capitalize first letter of each name
 		# Join names in array to form string (aliased name)
 	spy_name_array.each do |name|
 	  p name.capitalize!
 	end
 
 	p spy_name_array
-	p spiffy_alias = spy_name_array.join(" ")
+
+	puts "Your fabulous new alias is:"
+	puts spiffy_alias = spy_name_array.join(" ")
+
+	spy_book[original_name.to_sym] = spiffy_alias
 
 end
 
-# Release 1: Provide a User Interface => see lines 10-13, plus loop.
+spy_book.each { |key, value| puts "#{key} is also known as #{value}."}
+
+# Release 1: Provide a User Interface => see lines 10-14, plus loop.
+# Release 2: Store the Aliases => see lines 8, 79, and 83.
