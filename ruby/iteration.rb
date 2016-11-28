@@ -104,16 +104,24 @@ vowels.delete_if {|vowel| vowel == "y"}
 
 city_population.delete_if {|city, population| population < 2}
 
+p vowels
+p city_population
+
 # 2. Filter for items that satisfy a certain condition
 vowels.keep_if {|vowel| vowel < "u"}
 
 city_population.keep_if {|city, population| population > 2.5}
+
+p vowels
+p city_population
 
 # 3. Use a different method that filters for items that satisfy a certain condition
 vowels.select! {|vowel| vowel > "e"}
 
 largest_cities = city_population.select {|city, population| population > 3}
 
+p vowels
+p city_population
 
 # re-establishing full versions of array and hash
 vowels = ["a", "e", "i", "o", "u", "y"]
@@ -130,3 +138,6 @@ city_population = {
 vowels.reject! {|vowel| vowel <= "o"}
 
 city_population.reject! {|city, population| population > 3}
+
+p vowels
+p city_population
