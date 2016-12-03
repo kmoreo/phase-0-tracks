@@ -1,7 +1,11 @@
 class Santa
 
 	def initialize(gender, ethnicity)
-		puts "Initializing Santa instance ..."		
+		puts "Initializing Santa instance ..."
+		@gender = gender
+		@ethnicity = ethnicity
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0		
 	end
 
 	def speak
@@ -19,3 +23,6 @@ end
 kris = Santa.new()
 kris.speak
 kris.eat_milk_and_cookies("funfetti")
+
+
+
