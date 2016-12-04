@@ -1,0 +1,3 @@
+module Shout
+  #methods
+end
