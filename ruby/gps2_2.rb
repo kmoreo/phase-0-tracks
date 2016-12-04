@@ -35,16 +35,20 @@
   # iterate over each key-value pair in hash and make pretty
 # output: pretty list
 
-def create_list(list)
+def create_list(list, quantities)
   grocery_list = {}
-  list.each do |item|
-    grocery_list[item.to_sym] = 1
+  full_array = list.zip(quantities)
+
+  full_array.each do |item,quantity|
+    grocery_list[item.to_sym] = quantity
   end
-  grocery_list
+
+  p grocery_list
 end
 
 def add_list(item, quantity, ex_list)
   ex_list[item.to_sym] = quantity
+
   ex_list
 end
 
@@ -54,6 +58,7 @@ def remove_list(item, ex_list)
   else
     puts "Try again!"
   end
+
   ex_list
 end
 
@@ -63,8 +68,10 @@ def change_list(item, quantity, ex_list)
   else
     puts "Try again!"
   end
+
   ex_list
 end
+
 
 def print_list(ex_list)
   puts "-"*10
@@ -72,23 +79,42 @@ def print_list(ex_list)
   ex_list.each do |item, quantity|
     puts "=> Item: #{item.capitalize}, Quantity: #{quantity}"
   end
+
 end
 
+
 # Driver Code
+item_list = []
+quantity_list = []
 
-puts "Give me a list of items you'd like to purchase."
-user_list = gets.chomp.split(' ')
+input_over = false
 
-l = create_list(user_list)
+until input_over
+  puts "List an item you'd like to add to your grocery list."
+  puts "Type 'done' to stop"
+  item_input = gets.chomp
+  if item_input == 'done'
+    input_over = true
+    break 
+  else
+    puts "How much #{item_input} do you want?"
+    quantity_input = gets.chomp
+  end
 
-print_list(l)
+  item_list << item_input
+  quantity_list << quantity_input
+end
 
-add_list("bananas", 5, l)
+list = create_list(item_list, quantity_list)
 
-print_list(l)
+print_list(list)
 
-change_list("bananas", 18, l)
+# add_list("bananas", 5, list)
 
-# remove_list("bananas", l)
+# print_list(list)
 
-print_list(l)
+# change_list("bananas", 18, list)
+
+# # remove_list("bananas", l)
+
+# print_list(list)
