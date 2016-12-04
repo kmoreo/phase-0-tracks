@@ -8,7 +8,8 @@ class Santa
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		# @age = 0
+		@age = Random.rand(140)
 	end
 
 	def speak
@@ -20,10 +21,10 @@ class Santa
 	end
 
 	def print_stats
-		puts "Gender: #{@gender}"
-		puts "Ethnicity: #{@ethnicity}"
+		puts "Gender: #{gender}"
+		puts "Ethnicity: #{ethnicity}"
 		puts "Reindeers: #{@reindeer_ranking}"
-		puts "Age: #{@age}"
+		puts "Age: #{age}"
 	end
 
 	def celebrate_birthday
@@ -37,16 +38,18 @@ class Santa
 		p @reindeer_ranking
 	end
 
-	# def gender=(new_gender)
-	# 	@gender = new_gender
-	# end
-
+#Age and ethnicity getter methods (refactored above)
 	# def age
 	# 	@age
 	# end
 
 	# def ethnicity
 	# 	@ethnicity
+	# end
+
+#Gender setter method (refactored above)
+	# def gender=(new_gender)
+	# 	@gender = new_gender
 	# end
 
 end
@@ -57,13 +60,13 @@ end
 # kris.speak
 # kris.eat_milk_and_cookies("funfetti")
 
-santas = []
+example_genders = ["male", "female", "bigender", "transgender male", "transgender female", "non-gender", "flexible", "N/A"]
 
-example_genders = ["male", "female", "bigender", "transgender male", "cis female", "non-gender", "flexible", "N/A"]
-
-example_ethnicities = ["black", "latina", "white", "jewish", "none", "armenian", "Mystical Creature (unicorn)", "N/A"]
+example_ethnicities = ["black", "hispanic", "white", "none", "Mystical Creature (unicorn)", "N/A", "pacific islander", "native american", "elf"]
 
 cookies = ["sugar", "chocolate chip", "snickerdoodle", "ginger snap", "pfeffernusse", "biscotti", "shortbread", "rum ball"]
+
+# santas = []
 
 # example_genders.length.times do |i|
 # 	puts "New Santa Sign-up!"
@@ -76,18 +79,25 @@ cookies = ["sugar", "chocolate chip", "snickerdoodle", "ginger snap", "pfeffernu
 # 	puts "-"*10
 # end
 
-kris = Santa.new("male", "jewish")
+# kris = Santa.new("male", "jewish")
+# kris.speak
+# kris.eat_milk_and_cookies(cookies.sample)
+# p kris.age
+# p kris.ethnicity
+# kris.print_stats
+# kris.celebrate_birthday
+# kris.get_mad_at("Vixen")
+# kris.gender = "female"
+# p kris.age
+# p kris.ethnicity
+# kris.print_stats
 
-kris.speak
-kris.eat_milk_and_cookies(cookies.sample)
-p kris.age
-p kris.ethnicity
-kris.print_stats
-kris.celebrate_birthday
-kris.get_mad_at("Vixen")
-kris.gender = "female"
-p kris.age
-p kris.ethnicity
-kris.print_stats
-
-
+1000.times do |i|
+	puts "New Santa Sign-up!"
+	santa = Santa.new(example_genders.sample, example_ethnicities.sample)
+	puts "Welcome Santa No. #{i+1}!"
+	santa.speak
+	santa.eat_milk_and_cookies(cookies.sample)
+	santa.print_stats
+	puts "-"*10
+end
