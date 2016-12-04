@@ -4,7 +4,7 @@
 #   end
 
 #   def self.yell_happily(words)
-#     "OMG, " + words + "!!!" + " :)"
+#     "OMG, " + words.upcase + "!!!" + " :)"
 #   end
 # end
 
@@ -19,7 +19,7 @@ module Shout
   end
 
   def yell_happily(words)
-    puts "Hooray, " + words + "!!!" + " :)"
+    puts "Hooray, " + words.upcase + "!!!" + " :)"
   end
 end
 
