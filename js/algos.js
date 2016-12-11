@@ -42,14 +42,39 @@ function findMatch(obj1, obj2) {
 }
 
 // Release 2: Generate Random Test Data
+// Write a function that takes an integer for length, and builds and returns an array of strings of the given length.
+	// Pass to function an integer n, where n is the # of words in an array
+	// Declare array variable to store generated words
+	// Generate word of random length between 1-10 characters long
+	// Push generated word to array
+	// Run loop n times
 
+function generateWords(n) {
+	var testWords = [];
+	var alphabet = "abcdefghijklmnopqrstuvwxyz";
+	for (var i=0; i < n; i++) {
+		x = Math.floor(Math.random() * 10) + 1;
 
+		var word = "";
+		for(var wi=0; wi < x; wi++) {
+        	word += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+		}
+		testWords.push(word);
+	}
+	return testWords;
+}
+
+// DRIVER CODE:
 
 findLongest(["box", "pizza", "champagne", "treasure", "cake"]);
 findLongest(["chicago", "peoria", "evanston", "springfield"]);
 findLongest(["wellington", "candle", "treat", "potato"]);
 
-
 findMatch({name: "Pete", age: 36}, {name: "Rob", age: 36});
 findMatch({species: "dog", color: "black", weight: 36}, {species: "cat", color: "black", weight: 11});
 findMatch({item: "chair", style: "barstool"}, {item: "shelving rack", color: "chrome"});
+
+for (var d=0; d < 10; d++) {
+	console.log(generateWords(4));
+	findLongest(generateWords(4));
+}
