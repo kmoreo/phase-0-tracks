@@ -19,10 +19,30 @@ function findLongest(array) {
 	    	longestWord = array[i];
 	    }
 	}
-console.log("The longest word is " + longestWord + " with a length of " + longestLength + ".");
+	console.log("The longest word is " + longestWord + " with a length of " + longestLength + ".");
 }
+
+// Release 1: Find a Key-Value Match
+// Write a function that takes two objects and checks to see if the objects share at least one key-value pair.
+	
+function findMatch(obj1, obj2) {
+	var match = false;
+	for ( var key in obj1) {
+		if (obj1[key] == obj2[key]) {
+			match = true;
+			break;
+		}
+	}
+	return match;
+}
+
 
 
 findLongest(["box", "pizza", "champagne", "treasure", "cake"]);
 findLongest(["chicago", "peoria", "evanston", "springfield"]);
 findLongest(["wellington", "candle", "treat", "potato"]);
+
+
+findMatch({name: "Pete", age: 36}, {name: "Rob", age: 36});
+findMatch({species: "dog", color: "black", weight: 36}, {species: "cat", color: "black", weight: 11});
+findMatch({item: "chair", style: "barstool"}, {item: "shelving rack", color: "chrome"});
