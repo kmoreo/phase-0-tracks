@@ -24,6 +24,11 @@ function findLongest(array) {
 
 // Release 1: Find a Key-Value Match
 // Write a function that takes two objects and checks to see if the objects share at least one key-value pair.
+	// Start with a match variable set to false
+	// For each key in the first object, compare to the keys in the second object
+	// If the same key is in the second object, then compare to see if the values match as well
+	// If there is a match, reassign the match variable to true and break the loop
+	// Return the match variable value
 	
 function findMatch(obj1, obj2) {
 	var match = false;
@@ -35,6 +40,8 @@ function findMatch(obj1, obj2) {
 	}
 	return match;
 }
+
+// Release 2: Generate Random Test Data
 
 
 
