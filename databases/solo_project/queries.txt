@@ -1,0 +1,102 @@
+1. Display the information in one table (either table is fine).
+
+SELECT * FROM students;
+
+	1|Cole, Gary|17|19990306|1
+	2|Anderson, Chris|17|0|2
+	3|Miller, Steve|16|19991230|3
+	4|Walters, Sam|17|19990815|4
+	5|Burns, Victor|16|19991222|1
+	6|Daniels, Jennifer|17|19990506|2
+	7|Fields, Megan|17|19990304|3
+	8|Morrison, Jean|17|19990706|4
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+UPDATE students SET DOB = 19990409 WHERE name = 'Anderson, Chris';
+
+	1|Cole, Gary|17|19990306|1
+	2|Anderson, Chris|17|19990409|2
+	3|Miller, Steve|16|19991230|3
+	4|Walters, Sam|17|19990815|4
+	5|Burns, Victor|16|19991222|1
+	6|Daniels, Jennifer|17|19990506|2
+	7|Fields, Megan|17|19990304|3
+	8|Morrison, Jean|17|19990706|4
+
+UPDATE students SET name = 'Walters, Samantha' WHERE id = 4;
+
+	1|Cole, Gary|17|19990306|1
+	2|Anderson, Chris|17|19990409|2
+	3|Miller, Steve|16|19991230|3
+	4|Walters, Samantha|17|19990815|4
+	5|Burns, Victor|16|19991222|1
+	6|Daniels, Jennifer|17|19990506|2
+	7|Fields, Megan|17|19990304|3
+	8|Morrison, Jean|17|19990706|4
+
+3. Display the information in both tables using one query.
+
+SELECT students.name, students.age, students.DOB, homerooms.name FROM students JOIN homerooms ON students.homeroom_id = homerooms.id;
+
+	Cole, Gary|17|19990306|HR No. 1 - Ms. Abbott
+	Anderson, Chris|17|19990409|HR No. 2 - Mr. Baldwin
+	Miller, Steve|16|19991230|HR No. 3 - Mr. Chadwick
+	Walters, Samantha|17|19990815|HR No. 4 - Mrs. Davidson
+	Burns, Victor|16|19991222|HR No. 1 - Ms. Abbott
+	Daniels, Jennifer|17|19990506|HR No. 2 - Mr. Baldwin
+	Fields, Megan|17|19990304|HR No. 3 - Mr. Chadwick
+	Morrison, Jean|17|19990706|HR No. 4 - Mrs. Davidson
+
+4. Display a narrower selection of columns (fewer columns than all of them, in 
+other words) from both tables using one query.
+
+SELECT students.name, homerooms.name FROM students JOIN homerooms ON students.homeroom_id = homerooms.id;
+
+	Cole, Gary|HR No. 1 - Ms. Abbott
+	Anderson, Chris|HR No. 2 - Mr. Baldwin
+	Miller, Steve|HR No. 3 - Mr. Chadwick
+	Walters, Samantha|HR No. 4 - Mrs. Davidson
+	Burns, Victor|HR No. 1 - Ms. Abbott
+	Daniels, Jennifer|HR No. 2 - Mr. Baldwin
+	Fields, Megan|HR No. 3 - Mr. Chadwick
+	Morrison, Jean|HR No. 4 - Mrs. Davidson
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+DELETE FROM students WHERE name = 'Anderson, Chris';
+SELECT * FROM students;
+
+	1|Cole, Gary|17|19990306|1
+	3|Miller, Steve|16|19991230|3
+	4|Walters, Samantha|17|19990815|4
+	5|Burns, Victor|16|19991222|1
+	6|Daniels, Jennifer|17|19990506|2
+	7|Fields, Megan|17|19990304|3
+	8|Morrison, Jean|17|19990706|4
+
+Release 3: Solo Research:
+
+There are "INNER", "LEFT", "RIGHT", and "FULL" joins. "INNER" join accomplishes the same thing as "JOIN" that we've been using so far. "LEFT" returns all rows from the left table, and the matched rows from the right table. "RIGHT" returns all rows from the right table, and the matched rows from the left table. "FULL" returns all rows when there is a match in one of the tables.
+
+SELECT students.name, homerooms.name FROM students LEFT JOIN homerooms ON students.homeroom_id = homerooms.id;
+
+	Cole, Gary|HR No. 1 - Ms. Abbott
+	Miller, Steve|HR No. 3 - Mr. Chadwick
+	Walters, Samantha|HR No. 4 - Mrs. Davidson
+	Burns, Victor|HR No. 1 - Ms. Abbott
+	Daniels, Jennifer|HR No. 2 - Mr. Baldwin
+	Fields, Megan|HR No. 3 - Mr. Chadwick
+	Morrison, Jean|HR No. 4 - Mrs. Davidson
+	Williams, Jared|
+
+SELECT students.name, homerooms.name FROM homerooms LEFT JOIN students ON students.homeroom_id = homerooms.id;
+
+	Burns, Victor|HR No. 1 - Ms. Abbott
+	Cole, Gary|HR No. 1 - Ms. Abbott
+	Daniels, Jennifer|HR No. 2 - Mr. Baldwin
+	Fields, Megan|HR No. 3 - Mr. Chadwick
+	Miller, Steve|HR No. 3 - Mr. Chadwick
+	Morrison, Jean|HR No. 4 - Mrs. Davidson
+	Walters, Samantha|HR No. 4 - Mrs. Davidson
+	|HR No. 5 - Mr. Ellis
