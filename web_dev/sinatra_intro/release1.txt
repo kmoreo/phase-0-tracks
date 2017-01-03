@@ -1,0 +1,8 @@
+1. Is Sinatra the only web app library in Ruby? What are some others?
+--> Ruby on Rails, Padrino
+
+2. Are SQLite and the sqlite3 gem your only options for using a database with Sinatra? What are some others?
+--> ActiveRecord, DataMapper, PostgreSQL
+
+3. What is meant by the term web stack?
+--> Web stack" refers to the collection of software required for Web development. A web stack typically contains at least an operating system (OS), a programming language, database software and a Web server. For example, the "LAMP" is: Linux, Apache, MySQL, PHP.
