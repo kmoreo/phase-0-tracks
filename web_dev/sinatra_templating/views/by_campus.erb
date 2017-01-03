@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campus Directory</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Campus Directory</h1>
+  <ul>
+    <% @students.each do |student| %>
+      <li><%= student['name'] %>, <%= student['age'] %></li>
+    <% end %>
+  </ul>
+  <nav><a href="/">Go Back</a></p></nav>
+</body>
+</html>
