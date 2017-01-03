@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dinos and Stuff</title>
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+		    $(".dino").hide();
+		});
+
+		$("button").click(function(){
+		    $(".poof").show();
+		});
+	});
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+	<div>
+	    <img class="dino" src="trex.jpg" style="height:200px;width:auto;">
+	    <img class="poof" src="poof1.jpeg" style="display: none;height:200px;width:auto;">
+	    <p>T-Rex</p>
+	</div>
+	<div>
+	    <img class="dino" src="velociraptor.jpg" style="height:200px;width:auto;">
+	    <img class="poof" src="poof2.jpg" style="display: none;height:200px;width:auto;">
+	    <p>Velociraptor</p>
+	</div>
+	<div>
+	    <img class="dino" src="stegosaurus.png" style="height:200px;width:auto;">
+	    <img class="poof" src="poof3.jpg" style="display: none;height:200px;width:auto;">
+	    <p>Stegosaurus</p>
+	</div>
+	
+	<h2>Click here to simulate a gigantic meteor.</h2>
+	<button>Meteor</button>
+</body>
+</html>
